@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare+</title>
+
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script type="module" src="js/script.js"></script> -->
+  </head>
+  <body>
+    <div class="header p-5">
+      Values from Parent to child
+
+      <p id="fname1"></p>
+      <p id="lname1"></p>
+    </div>
+
+    <script>
+      let params = new URLSearchParams(window.location.search)
+      let fname = params.get('form_name')
+      let lname = params.get('form_email')
+
+      document.getElementById("fname1").innerHTML = fname;
+      document.getElementById("lname1").innerHTML = lname;
+    </script>
+  </body>
+</html>
